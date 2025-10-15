@@ -20,12 +20,12 @@ try:
             department = row[0] if row[0].strip() else "Unspecified Department"
             cost = int(row[3]) if row[3].strip() else 0
 
-            if depar in depatmentcosts:
+            if department in depatmentcosts:
                 # If the department is in the dictionary, add the cost to the total.
-                depatmentcosts[depar] += cost
+                depatmentcosts[department] += cost
             else:
                 # If the department is not in the dictionary, add the department and cost to the dictionary.
-                depatmentcosts[depar] = cost
+                depatmentcosts[department] = cost
 
         
         for department, cost in depatmentcosts.items():
